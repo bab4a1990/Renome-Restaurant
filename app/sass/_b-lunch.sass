@@ -1,0 +1,124 @@
+.b-lunch
+	background-color: #f7f7f7;
+	position: relative
+	height: 625px
+	+md
+		height: 750px
+	&__top
+		padding-top: 260px
+		padding-left: 100px
+		+lg
+			padding-left: 10px
+		+md
+			padding-top: 60px
+			text-align: center
+	&__bot
+		padding-left: 100px
+		+lg
+			padding-left: 10px
+		+md
+			text-align: center
+	&__img
+		padding-top: 100px
+		text-align: center
+		width: 550px
+		height: 400px
+		// user-drag: none
+		+lg
+			max-width: 500px
+		+md
+			padding-top: 1px
+			width: 500px
+			height: 380px
+			
+
+
+			
+	&__box
+		position: absolute
+		top: 130px
+		left: 420px	
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 17px;
+		font-weight: 700;
+		/* Text style for "$, 8.95" */
+		letter-spacing: 1.7px;
+		padding: 18px 24px 17px 23px
+		background-color: #edeff2;
+		+lg
+			left: 400px
+	&__text
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 15px;
+		padding-top: 25px
+		font-weight: 700;
+		/* Text style for "Homemade b" */
+		letter-spacing: 0.75px;
+	&__item
+		display: flex
+		justify-content: space-between
+	&__text--opacity
+		color: #dcdee0;
+		+font-fallback('Streetwear')
+		font-size: 20px;
+		font-weight: 400;
+		/* Text style for "M, onday" */
+		letter-spacing: 2px;
+		padding-top: 20px
+		
+	&--right
+		display: block
+		background-color: #edeff2;
+		padding: 11px 0
+		width: 0.9em !important
+		cursor: pointer
+	&--left
+		display: block
+		background-color: #edeff2;
+		margin-bottom: 5px
+		padding: 11px 0
+		width: 0.9em !important
+		cursor: pointer
+	&__navig
+		position: absolute
+		top: 40%
+		left: -1.5%
+@-webkit-keyframes animation
+	from 
+		opacity: 0;
+		transform: scale(1.2) rotateX(45deg);
+	to
+
+
+@-webkit-keyframes animation2
+	from 
+		opacity: 0;
+		transform: scale(1.2) rotateX(45deg);
+	to
+
+
+.slider
+	animation-delay: .1s
+	animation-fill-mode: backwards
+	margin: 10px auto
+	height: 500px
+	width: 300px
+	padding: 50px
+	perspective: 400px
+	transition: ease-in-out .2s
+	position: relative
+	transform-style: preserve-3d;
+	right: 40%
+	+xl
+		padding: 70px
+.slide 
+	// user-select: none;
+	position: absolute;
+	background: transperent
+
+.transition 
+	transition: cubic-bezier(0, 2, 2, 0.73) 0.9s;
+
+	

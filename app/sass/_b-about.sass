@@ -1,0 +1,36 @@
+.b-about
+	padding-top: 150px
+	padding-bottom: 140px
+	position: relative
+	+sm
+		padding-bottom: 60px
+	&__text
+		color: #404040;
+		max-width: 349px;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 400;
+		line-height: percentage(30/12);
+		/* Text style for "R, enome i" */
+		letter-spacing: 1.8px;
+		text-align: left
+	&__img--first
+		+lg
+			max-width: 100%
+		+sm
+			margin-left: 10px
+
+	&__img--second
+		position: absolute
+		left: -35px
+		top: 230px
+		+lg
+			max-width: 90%
+			left: 15px
+		+sm
+			top: 150px
+	&__title
+		+md
+			margin-top: 200px
+	&__text
+

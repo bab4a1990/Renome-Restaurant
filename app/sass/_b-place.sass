@@ -1,0 +1,33 @@
+.b-place
+	background-color: #f7f7f7
+	padding: 161px 0 155px 0 
+	text-align: center
+	position: relative
+	+md
+		padding: 100px 0 55px 0 
+	&__title
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 38px;
+		/* Text style for "", The mos" */
+		letter-spacing: 5px;
+		float: left
+	&__text
+		color: #1e2633;
+		+font-fallback('axis')	
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		/* Text style for "john doe" */
+		letter-spacing: 2.4px;
+		line-height: 30px
+	&__img
+		position: absolute
+		top: -260px	
+		left: 70px
+		+md
+			position: static
+			padding-top: 40px
+			max-width: 100%

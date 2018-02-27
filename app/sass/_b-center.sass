@@ -1,0 +1,84 @@
+.b-center
+	position: relative
+	&__bg--first
+		background: #1e2633 url("../img/header-img-1.png") center  no-repeat
+		background-size: cover
+		height: 100vh
+		+xl
+			height: 600px
+	&__bg--second
+		background: #1e2633 url("../img/header-img-2.png") center no-repeat
+		background-size: cover
+		height: 100vh
+		+xl
+			height: 600px
+	&__bg--third
+		background: #1e2633 url("../img/header-img-3.png") center no-repeat
+		background-size: 	cover
+		height: 100vh
+		+xl
+			height: 600px
+	&__item
+		position: absolute
+		top: 75%
+		left: 60%
+		+md
+			top: 40%
+			left: 10%
+	&__title
+		color: #ffffff;
+		+font-fallback('Axis')
+		font-size: 40px;
+		font-weight: 700;
+		/* Text style for "made with" */
+		letter-spacing: 5px;
+	&__text
+		color: #985e5b;
+		+font-fallback('Montserrat')
+		font-size: 30px;
+		font-weight: 700;
+		/* Text style for "for you" */
+		letter-spacing: 3px;
+
+	&__left
+		color: #fff
+		border: 2px solid #fff;
+		margin-right: 10px
+		height: 55px;
+		position: absolute
+		top: 78%
+		left: 12%
+		+xl
+			left: 120px
+		+lg
+			left: 100px
+		+md
+			left: 100px
+		+sm
+			left: 60px
+			top: 75%	
+
+		&:hover
+			color: #000
+			border-color: #000
+	&__right
+		color: #fff
+		border: 2px solid #fff;
+		height: 55px;
+		position: absolute
+		top: 78%
+		left: 17.5%
+
+		+xl
+			left: 190px
+		+lg
+			left: 170px
+		+md
+			l
+		+sm
+			left: 140px
+			top: 75%
+		&:hover
+			color: #000
+			border-color: #000
+

@@ -1,0 +1,86 @@
+.b-footer
+	padding: 40px 0 40px 0
+	background-color: #edeff2;
+	+lg
+		text-align: center
+	&__logo
+		padding-top: 5px
+	&__text
+		justify-content: center
+		display: flex
+		flex-direction: column
+		color: #1e2633;
+		+font-fallback('Axis')
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		/* Text style for "Copyright" */
+		letter-spacing: 0.6px;
+		padding-top: 15px
+		+md
+			padding-top: 20px
+	
+	&__text__icon
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 25px;
+		text-transform: uppercase;
+		display: inline-block
+		margin-right: 5px
+		+xl
+			display: block
+			text-align: left
+		+lg
+			text-align: center
+			
+	&__icon
+		display: inline-flex
+		flex-direction: row
+		justify-content: center;
+		align-items: center
+		color: #000;
+		border-radius: 50%;
+		border: 2px solid #000;
+		width: 42px
+		height: 42px
+		margin: 0 5px
+		cursor: pointer
+		transition: .1s
+		&:hover
+			border: 2px solid #000
+			color: #000
+	&__icon__face
+		&:hover
+			color: #3b5998
+			border-color: #3b5998
+
+	&__icon__google
+		&:hover
+			color: #dd4b39
+			border-color: #dd4b39
+	&__icon__twit
+		&:hover
+			border-color: #1da1f2
+			color: #1da1f2
+
+a
+	color: #000
+#toTop 
+	text-align: center;
+	position: fixed;
+	bottom: 20px; /* отступ кнопки от нижнего края страницы*/
+	right: 20px;
+	cursor: pointer;
+#toTop svg
+	width: 50px;
+	height: 50px; 
+
+
+	
+		
+		
+
+		
+

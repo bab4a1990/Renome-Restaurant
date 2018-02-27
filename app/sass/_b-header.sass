@@ -1,0 +1,229 @@
+.wrapper
+	overflow: hidden
+	
+.b-header
+	&__nav
+		width: 100%
+		z-index: 1000
+		position: absolute
+		background-color: #fff
+		padding: 30px 0 
+		border-bottom: 2px solid #f7f7f7
+	&__menu
+		float: right
+		padding-top: 3px
+		+xl
+			display: none
+			
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin-right: 25px
+				
+				a
+					+font-fallback('Montserrat')
+					color: #000000;
+					font-size: 12px;
+					font-weight: 700;
+					/* Text style for "H, OME" */
+					
+					letter-spacing: 2.4px;
+					/* Text style for "ABOUT" */
+					letter-spacing: 2.4px;
+					/* Text style for "shop" */
+					letter-spacing: 2.4px;
+					text-transform: uppercase;
+					text-decoration: none
+					&:hover
+						color: #985e5b;
+
+				&:nth-child(7)
+					&:after
+						content: ""
+						display: inline-block
+						width: 2px;
+						height: 13px;
+						background-color: #000000;
+						margin-left: 25px
+						margin-bottom: -2px
+	&__search
+		width: 15px;
+		height: 14px;
+		cursor: pointer
+		margin-right: 20px
+		position: absolute
+		right: -15px
+		top: 8px
+		+xl
+			display: none
+			
+	&__cart
+		width: 15px;
+		height: 14px;
+		cursor: pointer
+		position: absolute
+		right: -30px
+		top: 8px
+		+xl
+			display: none
+			
+
+		
+		
+	&__link
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		color: #fff
+		text-decoration: none;
+		font-size: 20px;
+		overflow: hidden;
+		top: 5px;
+		&:hover
+			color: #fff
+		&:after
+			content: '';
+			position: absolute;
+			background: $color-main;
+			height: 2px;
+			width: 0%;
+			transform: translateX(-50%);
+			left: 50%;
+			bottom: 0;
+			transition: .35s ease;
+		&:hover:after,&:focus:after,&:active:after 
+			width: 100%;
+.button_container
+	position: fixed
+	top: 30px
+	right: 5%;
+	height: $button-height;
+	width: $button-width;
+	cursor: pointer;
+	z-index: 100;
+	transition: opacity .25s ease;
+	display: none
+	+xl
+		display: block
+	&:hover
+		opacity: .7;
+	&.active .top
+		transform: translateY(11px) translateX(0) rotate(45deg);
+		background: $color-active;
+	&.active .middle
+		opacity: 0;
+		background: $color-active;
+	&.active 
+		.bottom 
+			transform: translateY(-11px) translateX(0) rotate(-45deg);
+			background: $color-active;
+.button__span
+	background: $color-main;
+	border: none;
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:  all .35s ease;
+	cursor: pointer;
+	&:nth-of-type(2)
+		top: 11px;
+
+	&:nth-of-type(3)
+		top: 22px;
+
+.overlay
+	position: fixed;
+	background: rgb(30, 38, 51)
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+	&.open
+		opacity: .9;
+		visibility: visible;
+		height: 100%;
+		li 
+			animation: fadeInRight .5s ease forwards;
+			animation-delay: .35s;
+			&:nth-of-type(2)
+				animation-delay: .4s;
+			&:nth-of-type(3)
+				animation-delay: .45s;
+			&:nth-of-type(4)
+				animation-delay: .50s;
+nav
+	position: relative;
+	height: 70%;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 50px;
+	font-weight: 400;
+	text-align: center;
+	ul
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;
+		height: 100%;
+		li
+			display: block;
+			height: 25%;
+			height: calc(100% / 4);
+			min-height: 50px;
+			position: relative;
+			opacity: 0;
+			.overlay__link
+				display: block;
+				color: $color-link;
+				overflow: hidden;
+				+font-fallback('Montserrat')
+				font-size: 18px;
+				font-weight: 700;
+				letter-spacing: 2.4px;
+				text-transform: uppercase;
+				text-decoration: none
+
+				&:hover:after,&:focus:after,&:active:after
+					width: 100%;
+					margin-top: 20px
+
+				&:after,:hover
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 0%;
+					top: 5px
+					transform: translateX(-50%);
+					height: 3px;
+					background: $color-link;
+					transition: .35s;
+@keyframes fadeInRight
+	0%
+		opacity: 0;
+		left: 20%;
+
+	100%
+		opacity: 1;
+		left: 0;
+
+.b-header__plus
+	position: fixed
+	z-index: 1000;
+	padding: 20px 0 10px 0
+	background-color: #fff 
+	width: 100%
+	border-bottom: 2px solid #f7f7f7
+	+xl
+		padding: 30px 0 20px 0
+
+		
+

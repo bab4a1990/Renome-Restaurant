@@ -1,0 +1,171 @@
+.b-menu
+	text-align: right
+	position: relative
+	&__text
+		color: #404040;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 30px;
+		/* Text style for "In our men" */
+		letter-spacing: 1.8px;
+		margin: 0 auto
+		padding-left: 27%
+	&__img--first
+		position: absolute
+		top: 25%
+		left: 30%
+		+md
+			max-width: 85%
+			left: 30%
+			top: 17%
+		+sm
+			left: 19%
+			max-width: 77%
+			top: 20%
+	&__img--second
+		padding-top: 55%
+		padding-right: 24%
+		padding-bottom: 35%
+		+md
+			max-width: 110%
+		+sm
+			max-width: 105%
+	&__nav
+		margin-bottom: 100px
+		text-align: center
+		&:after
+			content: ""
+			display: block
+			height: 2px;
+			width: 100%
+			background-color: #ebebeb;
+			background-color: #eeeeee;
+		ul
+			list-style: none
+			li
+				margin-right: 118px
+				display: inline-block
+				+xl
+					margin-right: 86px
+				+lg
+					margin-right: 46px
+				+md
+					margin-right: 55px
+				+sm
+					margin-right: 15px
+				a
+					color: #1e2633;
+					+font-fallback('Montserrat')
+					font-size: 12px;
+					font-weight: 700;
+					text-transform: uppercase;
+					/* Text style for "drinks" */
+					letter-spacing: 1.8px;
+					text-decoration: none
+					&:hover,:focus,:active
+						border-bottom: 2px solid #985e5b;
+						padding: 20px 0
+						color: #985e5b
+					+md
+						font-size: 10px
+	&__title
+		color: #1e2633;
+		+font-fallback("Streetwear")
+		font-size: 22px;
+		font-weight: 700;
+		line-height: percentage(24/22);
+		float: right
+		padding-bottom: 40px
+		padding-left: 200px
+		+md
+			padding: 0
+			text-align: center
+			width: 100%	
+			padding-bottom: 40px
+	&__img
+		display: block
+		padding-bottom: 47px
+		+md
+			display: block
+			margin-left: auto
+			margin-right: auto
+			
+	&__title__input 
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 14px;
+		font-weight: 700;
+		line-height: percentage(18/12);
+		/* Text style for "Chicken wi" */
+		letter-spacing: 0.7px;
+		+md
+			text-align: center
+			
+	&__text__input 
+		color: #404040;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 400;
+		line-height: percentage(24/12);
+		/* Text style for "It’s all a" */
+		letter-spacing: 1.8px;
+		+md
+			text-align: center
+			
+	&__top
+		padding-top: 15px	
+	&__top1
+		margin-top: 10px
+	&__top2
+		padding-right: 40px
+		padding-top: 10%
+		+xl
+			padding-left: 18%
+		+md
+			padding: 0
+			text-align: center
+			width: 100%	
+			padding-top: 10%
+			padding-bottom: 40px
+	&__top3
+		padding-left: 204px
+		padding-top: 10%
+		+xl
+			padding-left: 175px
+		+lg
+			padding-left: 135px
+		+md
+			padding: 0
+			text-align: center
+			width: 100%	
+			padding-top: 10%
+			padding-bottom: 40px
+			
+		
+	
+	&__bot1
+		padding-bottom: 200px
+		+md
+			padding-bottom: 60px
+	&__number
+		color: #1e2633;
+		+font-fallback("Jaapokki enchance")
+		font-size: 25px;
+		font-weight: 700;
+		padding-top: 7%
+		line-height: percentage(20/25);
+						
+	&__number--mod
+		color: #dcdee0;
+		font-weight: 700
+	&__right
+		float: right
+		vertical-align: middle
+		margin-top: 20px
+		+md
+			float: none
+			text-align: center
+			margin-top: 0px
+			margin-bottom: 40px
+		

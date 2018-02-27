@@ -1,0 +1,119 @@
+.b-contact
+	text-align: right
+	&__img--first
+		position: absolute
+		top: 20%
+		left: 30%
+		+sm
+			left: 17%
+			width: 80%
+	&__img--second
+		padding-top: 48%	
+		padding-right: 17.5%
+		padding-bottom: 100px
+		+sm
+			padding-right: 40%
+			width: 130%
+	&__text
+		color: #404040;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 30px;
+		/* Text style for "Please fee" */
+		letter-spacing: 1.8px
+		width: 312px;
+		float: right
+		
+	&__top
+		padding-top: 140px	
+	&__title
+		color: #985e5b;
+		+font-fallback('Montserrat')
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 25px;
+		text-transform: uppercase;
+		/* Text style for "W, rite a" */
+		letter-spacing: 1.7px;
+		display: block
+		margin-bottom: 40px
+		text-align: left
+	&__input
+		width: 100%
+		+font-fallback('Montserrat')
+		font-size: 15px;
+		font-weight: 700;
+		padding: 10px 0
+		border-top: none
+		border-left: none
+		border-right: none
+		border-bottom: 2px solid #f5f7fa
+		&::placeholder
+			color: #1e2633;
+		&:focus
+			border-bottom: 2px solid #985e5b
+			transition: 1s
+
+		+md
+			padding: 20px 0
+
+
+
+	&--bottom
+		margin-bottom: 20px
+		+md
+			margin-bottom: 0px
+			
+	&--top
+		padding-bottom: 100px
+
+	&__btn
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		/* Text style for "Send" */
+		letter-spacing: 0.6px;
+		border: none
+		background-color: #f5f7fa;
+		padding: 15px 38px 15px 38px
+		&:hover
+			background-color: #1e2633
+			color: #fff
+		+lg
+			padding: 13px 23px 13px 23px
+			margin-left: -30px
+		+md
+			padding: 15px 38px 15px 38px
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 40px
+			
+			
+
+	&__box
+		text-align: left
+		margin-bottom: 30px
+	&__box__head
+		color: #985e5b;
+		+font-fallback('Axis')
+		font-size: 15px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 0 auto
+	&__box__text
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+	&__date__arrow
+		background: url(../img/arrow-down.png) right no-repeat;
+		padding-right: 10px;
+		cursor: pointer;
+
+		
+

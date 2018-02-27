@@ -1,0 +1,142 @@
+.b-reservation
+	&__text
+		color: #404040;
+		+font-fallback('Montserrat')
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 30px;
+		/* Text style for "W, hen you" */
+		letter-spacing: 1.8px;
+		max-width: 400px;
+	&--top		
+		padding-top: 135px
+		+sm
+			font-size: 35px
+	&__img1
+		position: absolute
+		top: 100px
+		left: 85px
+		+sm
+			max-width: 80%
+			left: 15px
+			top: 140px
+	&__img2
+		float: right
+		padding-right: 9%
+		padding-top: 260px
+		+sm
+			max-width: 100%
+			margin-left: 30px
+			float: none
+	&__title
+		text-align: center
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 25px;
+		text-transform: uppercase;
+		/* Text style for "M, ake a R" */
+		letter-spacing: 1.7px;
+		padding-top: 55px
+		padding-bottom: 50px
+	&__form
+		position: relative
+		text-align: center
+	&__date
+		padding: 10px 0
+		margin-left: 20px
+		border-top: none
+		border-left: none
+		border-right: none
+		border-bottom: 2px solid #f5f7fa
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 15px;
+		width: 160px
+		font-weight: 700;
+		line-height: percentage(25/15);
+		margin-bottom: 40px
+		&::placeholder
+			color: #1e2633
+		&:focus
+			border-bottom: 2px solid #985e5b
+			transition: .9s
+		+md
+			width: 100%	
+		+sm
+			width: 95%
+
+	&__date__bg
+		background: url('../img/calendar-icon.png') left no-repeat
+		width: 20px
+		height: 24px
+		display: inline-block
+		margin-top: 1.2%
+		position: absolute
+		left: 16%
+		+xl
+			left: 10%
+		+lg
+			left: 1%	
+		+md
+			left: -10px
+			top: 5px
+	&__date--right
+		margin-right: 80px
+		+lg
+			margin-right: 50px	
+	&__date__time
+		background: url('../img/time_icon.png') left no-repeat
+		width: 20px
+		height: 24px
+		display: inline-block
+		margin-top: 1.2%
+		position: absolute
+		left: 40%
+		+xl
+			left: 38%	
+		+lg
+			left: 69%	
+		+md
+			left: -10px
+			top: 93px
+	&__date__arrow
+		background: url('../img/arrow-down.png')right no-repeat
+		padding-right: 10px
+		cursor: pointer
+	&__date__people
+		background: url('../img/people-icon.png') left no-repeat
+		width: 20px
+		height: 24px
+		display: inline-block
+		margin-top: 1.2%
+		position: absolute
+		left: 64%	
+		+xl
+			left: 66.5%	
+		+lg
+			left: 35%
+		+md
+			left: -10px
+			top: 178px	
+	&__btn 
+		background-color: #1e2633;
+		border: none
+		color: #ffffff;
+		+font-fallback('Montserrat')
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		/* Text style for "F, ind a T" */
+		letter-spacing: 1.65px;
+		padding: 20px 41px
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 100px
+		
+
+
+
+		
