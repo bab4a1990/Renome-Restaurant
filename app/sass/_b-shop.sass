@@ -1,0 +1,70 @@
+.b-shop
+	&__img
+		max-width: 100%
+		+md
+			display: block
+			margin-left: auto
+			margin-right: auto
+			
+	&__box
+		text-align: center
+	&__search
+		position: absolute
+		right: -15px
+		top: 3px
+	&__title
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 14px;
+		font-weight: 700;
+		/* Text style for "C, hicken" */
+		letter-spacing: 0.7px;
+		padding-top: 30px
+	&__text
+		color: #1e2633;
+		+font-fallback('Montserrat')
+		font-size: 14px;
+		font-weight: 700;
+		/* Text style for "$, 9.55" */
+		letter-spacing: 0.7px;
+		padding-top: 10px
+	&__top
+		padding-top: 54px
+	&__bot
+		padding-bottom: 100px
+	&__arrow
+		position: relative
+	&__arrow--left
+		position: absolute
+		left: 0
+		top: -40px
+	&__arrow--right
+		position: absolute
+		right: 0
+		top: -40px
+	&__number
+		position: absolute
+		left: 50%
+		top: -15px
+		transform: translate(-50%,-50%)		
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin-right: 40px
+				+md
+					margin-right: 30px
+				+sm
+					margin-right: 10px
+				a
+					color: #1e2633;
+					+font-fallback('Montserrat')
+					font-size: 15px;
+					font-weight: 700;
+					line-height: 30px;
+					text-transform: uppercase;
+					&:hover
+						color: #985e5b;
+						text-decoration: none
+						
+

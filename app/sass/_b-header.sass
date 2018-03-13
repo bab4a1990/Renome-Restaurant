@@ -1,14 +1,53 @@
 .wrapper
 	overflow: hidden
-	
+
 .b-header
+	&__close
+		position: absolute;
+		left: 186px
+		top: -7px;
+		width: 17px;
+		height: 17px;
+		opacity: 0.7;
+		z-index: 20
+		display: none
+		+xl
+			display: none
+			
+		&:hover
+			opacity: 1
+		&:after
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 17px;
+			width: 2px;
+			background-color: #985e5b
+		&:before
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 17px;
+			width: 2px;
+			background-color: #985e5b
+		
+		&:before
+			transform: rotate(45deg);
+		&:after
+			transform: rotate(-45deg);
 	&__nav
 		width: 100%
 		z-index: 1000
 		position: absolute
-		background-color: #fff
-		padding: 30px 0 
-		border-bottom: 2px solid #f7f7f7
+		background-color: rgba(256,256,256,1)
+		padding: 25px 0 
+	&__nav__shop
+		width: 100%
+		z-index: 1000
+		position: absolute
+		background-color: transparent
+		padding: 25px 0 
+		color: #fff
 	&__menu
 		float: right
 		padding-top: 3px
@@ -35,6 +74,7 @@
 					letter-spacing: 2.4px;
 					text-transform: uppercase;
 					text-decoration: none
+				
 					&:hover
 						color: #985e5b;
 
@@ -47,16 +87,58 @@
 						background-color: #000000;
 						margin-left: 25px
 						margin-bottom: -2px
+	&__menu__shop
+		float: right
+		padding-top: 3px
+		+xl
+			display: none
+			
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin-right: 25px
+				
+				a
+					+font-fallback('Montserrat')
+					color: #000000;
+					font-size: 12px;
+					font-weight: 700;
+					/* Text style for "H, OME" */
+					
+					letter-spacing: 2.4px;
+					/* Text style for "ABOUT" */
+					letter-spacing: 2.4px;
+					/* Text style for "shop" */
+					letter-spacing: 2.4px;
+					text-transform: uppercase;
+					text-decoration: none
+				
+					&:hover
+						color: #985e5b;
+
+				&:nth-child(7)
+					&:after
+						content: ""
+						display: inline-block
+						width: 2px;
+						height: 13px;
+						background-color: #fff
+						margin-left: 25px
+						margin-bottom: -2px
 	&__search
 		width: 15px;
 		height: 14px;
 		cursor: pointer
 		margin-right: 20px
 		position: absolute
-		right: -15px
-		top: 8px
+		right: -10px
+		top: 3px
+
 		+xl
 			display: none
+	&__search__shop
+		color: #fff
 			
 	&__cart
 		width: 15px;
@@ -64,11 +146,14 @@
 		cursor: pointer
 		position: absolute
 		right: -30px
-		top: 8px
+		top: 7px
 		+xl
 			display: none
 			
-
+	&__linka
+		color: #fff !important
+		&:hover
+			color: #985e5b !important
 		
 		
 	&__link
@@ -77,9 +162,9 @@
 		text-align: center;
 		color: #fff
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 18px;
 		overflow: hidden;
-		top: 5px;
+		top: -30px;
 		&:hover
 			color: #fff
 		&:after
@@ -94,8 +179,8 @@
 			transition: .35s ease;
 		&:hover:after,&:focus:after,&:active:after 
 			width: 100%;
-.button_container
-	position: fixed
+.button_contain
+	position: absolute
 	top: 30px
 	right: 5%;
 	height: $button-height;
@@ -118,6 +203,45 @@
 		.bottom 
 			transform: translateY(-11px) translateX(0) rotate(-45deg);
 			background: $color-active;
+.button_container
+	position: absolute
+	top: 30px
+	right: 5%;
+	height: $button-height;
+	width: $button-width;
+	cursor: pointer;
+	z-index: 100;
+	transition: opacity .25s ease;
+	display: none
+	+xl
+		display: block
+	&:hover
+		opacity: .7;
+	&.active .top
+		transform: translateY(11px) translateX(0) rotate(45deg);
+		background: $color-active;
+	&.active .middle
+		opacity: 0;
+		background: $color-active;
+	&.active 
+		.bottom 
+			transform: translateY(-11px) translateX(0) rotate(-45deg);
+			background: $color-active;
+.button__column
+	background: #fff
+	border: none;
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:  all .35s ease;
+	cursor: pointer;
+	&:nth-of-type(2)
+		top: 11px;
+
+	&:nth-of-type(3)
+		top: 22px;
 .button__span
 	background: $color-main;
 	border: none;
@@ -160,7 +284,7 @@
 				animation-delay: .50s;
 nav
 	position: relative;
-	height: 70%;
+	height: 78%;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 50px;
@@ -175,8 +299,6 @@ nav
 		height: 100%;
 		li
 			display: block;
-			height: 25%;
-			height: calc(100% / 4);
 			min-height: 50px;
 			position: relative;
 			opacity: 0;
@@ -191,21 +313,6 @@ nav
 				text-transform: uppercase;
 				text-decoration: none
 
-				&:hover:after,&:focus:after,&:active:after
-					width: 100%;
-					margin-top: 20px
-
-				&:after,:hover
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: 50%;
-					width: 0%;
-					top: 5px
-					transform: translateX(-50%);
-					height: 3px;
-					background: $color-link;
-					transition: .35s;
 @keyframes fadeInRight
 	0%
 		opacity: 0;
@@ -215,15 +322,70 @@ nav
 		opacity: 1;
 		left: 0;
 
-.b-header__plus
-	position: fixed
-	z-index: 1000;
-	padding: 20px 0 10px 0
-	background-color: #fff 
-	width: 100%
-	border-bottom: 2px solid #f7f7f7
-	+xl
-		padding: 30px 0 20px 0
 
+
+
+.sb-search-input
+	position: absolute;
+	top: -5px;
+	left: -50px	
+	border: none;
+	outline: none;
+	background: rgba(256,256,256,0.1)
+	width: 25%;
+	height: 36px;
+	margin: 0;
+	z-index: 10;
+	padding: 15px 65px 15px 20px;
+	+font-fallback('Montserrat')
+	font-size: 16px;
+	color: #000
+	border: 1px solid #985e5b
+	display: none
+	+lg
+		display: none
 		
+	
 
+
+.js-search
+	border: none
+	background-color: transparent
+	
+	
+	
+
+
+
+.sb-icon-search:before
+	content: "\e000";
+
+.sb-search-input::-webkit-input-placeholder
+	color: #985e5b
+
+
+.preloader
+	width: 100%;
+	height: 100vh;
+	background: url("../img/preloader-bg.png") no-repeat
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 30px
+	+font-fallback('Montserrat')
+	position: relative;
+	&__status
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	
+	&__status-loader
+		width: 100%;
+		height: 3px;
+	&__status-bar
+		background: white;
+		height: 100%;	

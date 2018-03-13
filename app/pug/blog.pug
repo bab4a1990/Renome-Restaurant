@@ -1,0 +1,172 @@
+extends templates/layout
+
+block header
+	.b-header__nav__shop
+		.container
+			.row
+				.col-md-2
+					a(href="#")
+						img(src="img/renome-logo.png", alt="logo").b-header__logo
+				.col-md-10
+					.b-header__menu__shop
+						ul
+							li
+								a(href="index.html#home").b-header__linka Home
+							li
+								a(href="index.html#about").b-header__linka About
+							li
+								a(href="index.html#menu").b-header__linka Menu
+							li
+								a(href="index.html#reservation").b-header__linka RESERVATIONS
+							li
+								a(href="blog.html").b-header__linka BLOG
+							li
+								a(href="renome-shop.html").b-header__linka shop   
+							li
+								a(href="contact.html").b-header__linka CONTACT
+					.js-search.b-header__search.b-shop__search.b-header__search__shop
+						i.fas.fa-search
+					form
+						input.sb-search-input(placeholder='search... ', type='text', value='', name='search')
+						.b-header__close
+
+					i.fas.fa-shopping-cart.b-header__cart(onclick="alert('Корзина пуста!')")
+				#toggle.button_contain
+					span.button__column.top
+					span.button__column.middle
+					span.button__column.bottom
+				#overlay.overlay
+					nav.overlay-menu
+						ul
+							li
+								a(href='/#home').b-header__link Home
+							li
+								a(href='/#about').b-header__link About
+							li
+								a(href='/#menu').b-header__link Menu
+							li
+								a(href='/#reservation').b-header__link Reservations
+							li
+								a(href='/#blog').b-header__link Blog
+							li
+								a(href='index.html#blog').b-header__link Shop
+							li
+								a(href='/#contact').b-header__link Contact
+
+block main
+	.b-center
+		.b-center__bg--three.item
+			.b-center__box
+				h1.b-center__title blog
+				p.b-center__text news, recipes and much more
+	.b-newsblog
+		.container
+			.row
+				.col-md-6
+					input(type="text" placeholder="Search").b-newsblog__input
+					i.fas.fa-search
+					.b-newsblog__menu
+						.b-newsblog__menu-title Categories
+						.b-newsblog__menu-nav
+							ul
+								li
+									a(href="#") Events
+								li
+									a(href="#") Press
+								li
+									a(href="#") Promotions
+								li
+									a(href="#") Recipes
+					.b-newsblog__post
+						.b-newsblog__post-title Popular Posts
+						.row
+							.col-md-2
+								img(src="img/post-img-1.png", alt="1").b-newsblog__img-post
+
+							.col-md-10
+								.b-newsblog__post-box
+									a(href="#special").js-scroll
+									.b-newsblog__post-list
+										.b-newsblog__post-head Summer specials
+										p.b-newsblog__post-date June 5, 2015
+						.row.b-newsblog__top-box
+							.col-md-2
+								img(src="img/post-img-2.png", alt="2")
+
+							.col-md-10
+								.b-newsblog__post-box
+									a(href="#salat").js-scroll.b-newsblog__post-head Our salad are award winning
+									p.b-newsblog__post-date April 25, 2015
+						.row.b-newsblog__top-box
+							.col-md-2
+								img(src="img/post-img-3.png", alt="3")
+
+							.col-md-10
+								.b-newsblog__post-box
+									a(href="#pizza").b-newsblog__post-head.js-scroll Homemade pizza
+									p.b-newsblog__post-date April 7, 2015
+						.row.b-newsblog__top-box
+							.col-md-2
+								img(src="img/post-img-4.png", alt="3")
+
+							.col-md-10
+								.b-newsblog__post-box
+									h1.b-newsblog__post-head Grand opening!
+									p.b-newsblog__post-date March 10, 2015
+
+					
+				.col-md-6
+					.b-newsblog__item#special
+						p.b-newsblog__head promotions
+						h1.b-newsblog__title Summer specials
+						p.b-newsblog__date June 5, 2015
+					img(src="img/blog-1.png", alt="blog 1").b-newsblog__img
+					.b-newsblog__box
+						p.newsblog__box-text  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra felis lectus, eget malesuada lorem suscipit sed. Maecenas sapien lacus, placerat in nibh nec, maximus ornare magna. Ut vestibulum leo vel dignissim interdum.
+						a(href="#").b-newsblog__box-link Continue Reading…
+					.b-newsblog__item.b-newsblog__top-item#salat
+						p.b-newsblog__head press
+						h1.b-newsblog__title our salad are award winning
+						p.b-newsblog__date APril 25, 2015
+					img(src="img/blog-2.png", alt="blog 2").b-newsblog__img
+					.b-newsblog__box
+						p.newsblog__box-text Sed viverra bibendum sollicitudin. Praesent interdum porttitor elit molestie convallis. Integer sagittis vitae sem eget euismod. Etiam ut risus ac ligula hendrerit volutpat. Donec at consectetur leo, eu pretium estmauris
+						a(href="#").b-newsblog__box-link Continue Reading…
+					.b-newsblog__item.b-newsblog__top-item#pizza
+						p.b-newsblog__head recipes
+						h1.b-newsblog__title homemade pizza
+						p.b-newsblog__date APril 7, 2015
+					img(src="img/blog-3.png", alt="blog 3").b-newsblog__img
+					.b-newsblog__box
+						p.newsblog__box-text Curabitur pulvinar condimentum augue, id facilisis nunc dapibus vel. Praesent ut tortor non lorem iaculis imperdiet mollis at ex. Ut fringilla, sapien ac tempus mattis, massa tortor posuere neque  etiam vitae orci ut tellusbi ben.
+						a(href="#").b-newsblog__box-link Continue Reading…
+					.b-newsblog__item.b-newsblog__top-item
+						p.b-newsblog__head events
+						h1.b-newsblog__title grand opening!
+						p.b-newsblog__date March 10, 2015
+					img(src="img/blog-4.png", alt="blog 4").b-newsblog__img
+					.b-newsblog__arrow
+						i.fas.fa-angle-left.fa-8x.b-newsblog__left
+						i.fas.fa-angle-right.fa-8x.b-newsblog__right
+					.b-newsblog__box.b-newsblog__bot-item
+						p.newsblog__box-text Curabitur pulvinar condimentum augue, id facilisis nunc dapibus vel. Praesent ut tortor non lorem iaculis imperdiet mollis at ex. Ut fringilla, sapien ac tempus mattis, massa tortor posuere neque  etiam vitae orci ut tellusbi ben.
+						a(href="#").b-newsblog__box-link Continue Reading…
+			.b-shop__arrow
+				i.fas.fa-angle-right.fa-2x.b-shop__arrow--right
+				i.fas.fa-angle-left.fa-2x.b-shop__arrow--left
+				.b-shop__number
+					ul
+						li
+							a(href="#") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3
+						li
+							a(href="#") 4
+						li
+							a(href="#") 5
+
+
+
+	

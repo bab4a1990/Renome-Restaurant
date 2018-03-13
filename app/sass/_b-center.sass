@@ -1,5 +1,23 @@
 .b-center
 	position: relative
+	&__bg--one
+		background: url("../img/shop-bg.png") center  no-repeat
+		background-size: cover
+		height: 100vh
+		+xl
+			height: 600px
+	&__bg--two
+		background: url("../img/contact-img.png") center  no-repeat
+		background-size: cover
+		height: 100vh
+		+xl
+			height: 600px
+	&__bg--three
+		background: url("../img/blog-bg.png") center  no-repeat
+		background-size: cover
+		height: 100vh
+		+xl
+			height: 600px
 	&__bg--first
 		background: #1e2633 url("../img/header-img-1.png") center  no-repeat
 		background-size: cover
@@ -19,12 +37,18 @@
 		+xl
 			height: 600px
 	&__item
-		position: absolute
-		top: 75%
-		left: 60%
+		padding-top: 37%
+		padding-left: 55%
+		+xl
+			padding-top: 42%
+		+lg
+			padding-top: 49%
+			padding-left: 50%
 		+md
-			top: 40%
-			left: 10%
+			padding-top: 60%
+		+sm
+			padding-left: 10%
+			padding-top: 60%
 	&__title
 		color: #ffffff;
 		+font-fallback('Axis')
@@ -39,6 +63,15 @@
 		font-weight: 700;
 		/* Text style for "for you" */
 		letter-spacing: 3px;
+	&__box
+		padding-top: 35%
+		padding-left: 8.9%
+		+lg
+			padding-top: 43%
+		+md
+			padding-top: 60%
+		+sm
+			padding-top: 80%
 
 	&__left
 		color: #fff

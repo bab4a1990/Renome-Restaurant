@@ -1,29 +1,40 @@
-header.b-header
+.preloader
+	.preloader__status
+		.preloader__status-text(status='') {{loaded}} % 
+		.preloader__status-loader
+			.preloader__status-bar(loader='', :style='loadStyle')
+
+header.b-header#home
 	.b-header__nav
 		.container
 			.row
 				.col-md-2
 					a(href="#")
-						img(src="../img/logo.png", alt="logo").b-header__logo
+						img(src="img/logo.png", alt="logo").b-header__logo
 				.col-md-10
 					.b-header__menu
 						ul
 							li
-								a(href="#") Home
+								a(href="#home").js-scroll Home
 							li
-								a(href="#about") About
+								a(href="#about").js-scroll About
 							li
-								a(href="#") Menu
+								a(href="#menu").js-scroll Menu
 							li
-								a(href="#") RESERVATIONS
+								a(href="#reservation").js-scroll RESERVATIONS
 							li
-								a(href="#") BLOG
+								a(href="blog.html") BLOG
 							li
-								a(href="#") shop   
+								a(href="renome-shop.html") shop   
 							li
-								a(href="#") CONTACT
-					i.fas.fa-search.b-header__search
-					i.fas.fa-shopping-cart.b-header__cart
+								a(href="contact.html") CONTACT
+					button.js-search.b-header__search
+						i.fas.fa-search
+					form
+						input.sb-search-input(placeholder='search . . . ', type='text', value='', name='search')
+						.b-header__close
+
+					i.fas.fa-shopping-cart.b-header__cart(onclick="alert('Корзина пуста!')")
 				#toggle.button_container
 					span.button__span.top
 					span.button__span.middle
@@ -32,19 +43,19 @@ header.b-header
 					nav.overlay-menu
 						ul
 							li
-								a(href='#').b-header__link Home
+								a(href='#home').b-header__link.js-scroll Home
 							li
-								a(href='#about').b-header__link About
+								a(href='#about').b-header__link.js-scroll About
 							li
-								a(href='#').b-header__link Menu
+								a(href='#menu').b-header__link.js-scroll Menu
 							li
-								a(href='#').b-header__link Reservations
+								a(href='#reservation').b-header__link.js-scroll Reservations
 							li
-								a(href='#').b-header__link Blog
+								a(href='#blog').b-header__link.js-scroll Blog
 							li
-								a(href='#').b-header__link Shop
+								a(href='renome-shop.html').b-header__link Shop
 							li
-								a(href='#').b-header__link Contact
+								a(href='#contact').b-header__link.js-scroll Contact
 
 
 

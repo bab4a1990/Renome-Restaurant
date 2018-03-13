@@ -2,9 +2,15 @@
 	box-sizing: border-box
 
 a, input, select, textarea
+	&:hover
+		text-decoration: none
+		
 	&:focus
 		outline: 0
+		text-decoration: none
+		
 
 body
 	font-size: 16px
 	+font-fallback('Roboto')
+	

@@ -1,0 +1,106 @@
+extends templates/layout
+
+block header
+	.b-header__nav__shop
+		.container
+			.row
+				.col-md-2
+					a(href="#")
+						img(src="img/renome-logo.png", alt="logo").b-header__logo
+				.col-md-10
+					.b-header__menu__shop
+						ul
+							li
+								a(href="index.html#home").b-header__linka Home
+							li
+								a(href="index.html#about").b-header__linka About
+							li
+								a(href="index.html#menu").b-header__linka Menu
+							li
+								a(href="index.html#reservation").b-header__linka RESERVATIONS
+							li
+								a(href="blog.html").b-header__linka BLOG
+							li
+								a(href="renome-shop.html").b-header__linka shop   
+							li
+								a(href="index.html#contact").b-header__linka CONTACT
+					.js-search.b-header__search.b-shop__search.b-header__search__shop
+						i.fas.fa-search
+					form
+						input.sb-search-input(placeholder='search... ', type='text', value='', name='search')
+						.b-header__close
+
+					i.fas.fa-shopping-cart.b-header__cart(onclick="alert('Корзина пуста!')")
+				#toggle.button_contain
+					span.button__column.top
+					span.button__column.middle
+					span.button__column.bottom
+				#overlay.overlay
+					nav.overlay-menu
+						ul
+							li
+								a(href='/#home').b-header__link Home
+							li
+								a(href='/#about').b-header__link About
+							li
+								a(href='/#menu').b-header__link Menu
+							li
+								a(href='/#reservation').b-header__link Reservations
+							li
+								a(href='/#blog').b-header__link Blog
+							li
+								a(href='index.html#blog').b-header__link Shop
+							li
+								a(href='/#contact').b-header__link Contact
+
+block main
+	.b-center
+		.b-center__bg--two.item
+			.b-center__box
+				h1.b-center__title contact
+				p.b-center__text we welcome you in our restaurant
+	.b-contact#contact
+		.container
+			.row
+				.col-md-6
+					h1.b-item__title.b-contact__top happy
+					p.b-item__text to hear from you, contact usrestaurant
+					p.b-contact__text Please feel free to contact us with any questions or to make reservations. If no one is available to take your call, please leave a message. We will contact you as soon as possible.
+
+				.col-md-6
+					img(src="img/contact-img-1.png", alt="menu 1").b-contact__img--first
+					img(src="img/contact-img-2.png", alt="menu 2").b-contact__img--second
+			form.b-contact__form
+				.row
+					.col-md-9
+						.b-contact__title Write a message
+						.row.b-contact--bottom
+							.col-md-6 
+								input(type="text",placeholder="First Name * ").b-contact__input
+							.col-md-6 
+								input(type="text",placeholder="Last Name * ").b-contact__input
+						.row.b-contact--bottom
+							.col-md-6
+								input(type="email",placeholder="Email * ").b-contact__input
+							.col-md-6 
+								input(type="text",placeholder="Subject").b-contact__input.b-contact__date__arrow
+						.row.b-contact--top
+							.col-md-10
+								input(type="text",placeholder="Message *").b-contact__input
+							.col-md-2
+								button.b-contact__btn Send
+
+					.col-md-3
+						.b-contact__title Contact Details
+						.b-contact__box
+							p.b-contact__box__head Address
+							p.b-contact__box__text 355 E 5TH ST, MANHATTAN, NY 10003
+						.b-contact__box
+							p.b-contact__box__head Phone
+							p.b-contact__box__text +1 939 777 55 33
+						.b-contact__box
+							p.b-contact__box__head email
+							p.b-contact__box__text reservation@renome.com
+	.b-map
+		i.fas.fa-map-marker.fa-3x.b-map__pin
+	

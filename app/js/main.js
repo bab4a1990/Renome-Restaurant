@@ -1,7 +1,7 @@
 
 //scroll for menu
 $(document).ready(function(){
-	$(".overlay-menu,.b-header__menu").on("click","a", function (event) {
+	$(".js-scroll").on("click", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
 		event.preventDefault();
 
@@ -46,8 +46,10 @@ $('#carouselOne').owlCarousel({
 	loop:true,
 	nav:true,
 	dots:false,
-	pagination : true,
 	navSpeed: 2000,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  smartSpeed: 1000,
 	navText: [$('.b-center__left'),$('.b-center__right')]
 });
 
@@ -56,6 +58,12 @@ $('#toggle').click(function() {
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
+
+$("#overlay").on("click","a",function(){
+     $('#overlay').removeClass('open')
+     $('#toggle').removeClass('active')
+
+});
 // slider
 
 window.addEventListener('load', onWndLoad, false);
@@ -220,31 +228,27 @@ function onWndLoad() {
 
 
 $("document").ready(function($){
-    var nav = $('.b-header__nav');
+    // var nav = $('.b-header__nav');
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            nav.addClass("b-header__plus");
-        } else {
-            nav.removeClass("b-header__plus");
-        }
-    });
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 0) {
+    //         nav.addClass("b-header__plus");
+    //     } else {
+    //         nav.removeClass("b-header__plus");
+    //     }
+    // });
+
+    $('.js-search').click(function() {
+      $('.sb-search-input').css("display","block");
+       $('.b-header__close').css("display","block");
+    }); 
+     $('.b-header__close').click(function() {
+      $('.sb-search-input').css("display","none");
+       $('.b-header__close').css("display","none");
+    }); 
+     
+
 });
 
-new WOW().init();
 
-var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow) 
-    animateClass: 'animated', // animation css class (default is animated) 
-    offset:       0,          // distance to the element when triggering the animation (default is 0) 
-    mobile:       true,       // trigger animations on mobile devices (default is true) 
-    live:         true,       // act on asynchronously loaded content (default is true) 
-    callback:     function(box) {
-      // the callback is fired every time an animation is started 
-      // the argument that is passed in is the DOM node being animated 
-    },
-    scrollContainer: null // optional scroll container selector, otherwise use window 
-  }
-);
-wow.init();
+

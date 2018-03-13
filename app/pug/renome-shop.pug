@@ -1,0 +1,172 @@
+extends templates/layout
+
+block header
+	.b-header__nav__shop
+		.container
+			.row
+				.col-md-2
+					a(href="#")
+						img(src="img/renome-logo.png", alt="logo").b-header__logo
+				.col-md-10
+					.b-header__menu__shop
+						ul
+							li
+								a(href="index.html#home").b-header__linka Home
+							li
+								a(href="index.html#about").b-header__linka About
+							li
+								a(href="index.html#menu").b-header__linka Menu
+							li
+								a(href="index.html#reservation").b-header__linka RESERVATIONS
+							li
+								a(href="blog.html").b-header__linka BLOG
+							li
+								a(href="renome-shop.html").b-header__linka shop   
+							li
+								a(href="contact.html").b-header__linka CONTACT
+					.js-search.b-header__search.b-shop__search.b-header__search__shop
+						i.fas.fa-search
+					form
+						input.sb-search-input(placeholder='search... ', type='text', value='', name='search')
+						.b-header__close
+
+					i.fas.fa-shopping-cart.b-header__cart(onclick="alert('Корзина пуста!')")
+				#toggle.button_contain
+					span.button__column.top
+					span.button__column.middle
+					span.button__column.bottom
+				#overlay.overlay
+					nav.overlay-menu
+						ul
+							li
+								a(href='/#home').b-header__link Home
+							li
+								a(href='/#about').b-header__link About
+							li
+								a(href='/#menu').b-header__link Menu
+							li
+								a(href='/#reservation').b-header__link Reservations
+							li
+								a(href='/#blog').b-header__link Blog
+							li
+								a(href='index.html#blog').b-header__link Shop
+							li
+								a(href='/#contact').b-header__link Contact
+
+block main
+	.b-center
+		.b-center__bg--one.item
+			.b-center__box
+				h1.b-center__title shop
+				p.b-center__text order dishes online
+	.b-menu__nav.b-menu__up
+		ul.nav.justify-content-center(role="tablist")
+			li.nav-item
+				a(href="#all",data-toggle="tab",role="tab").nav-link.active all products
+			li.nav-item
+				a(href="#main",data-toggle="tab",role="tab").nav-link  mains
+			li.nav-item
+				a(href="#breakfest",data-toggle="tab",role="tab").nav-link  breakfast
+			li.nav-item
+				a(href="#dessert",data-toggle="tab",role="tab").nav-link desserts
+	.container
+		.tab-content
+			.tab-pane.active#all(role='tabpanel')
+				.row
+					.col-md-4
+						img(src="img/img-shop-1.png", alt="img shop 1").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Chicken livers
+							p.b-shop__text $9.55
+
+					.col-md-4
+						img(src="img/img-shop-2.png", alt="img shop 2").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Steak with vegetables
+							p.b-shop__text $14.20
+
+					.col-md-4
+						img(src="img/img-shop-3.png", alt="img shop 3").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Beef with pineapple
+							p.b-shop__text $18.20
+				.row.b-shop__top.b-shop__bot
+					.col-md-4
+						img(src="img/shop-img-4.png", alt="img shop 1").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Waffles with coffee
+							p.b-shop__text $7.90
+
+					.col-md-4
+						img(src="img/img-shop-5.png", alt="img shop 2").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Apple pie
+							p.b-shop__text $15.70
+
+					.col-md-4
+						img(src="img/img-shop-6.png", alt="img shop 3").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Egg baguette
+							p.b-shop__text $8.10
+
+			.tab-pane#main(role='tabpanel')
+				.row.b-shop__bot
+					.col-md-4
+						img(src="img/img-shop-1.png", alt="img shop 1").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Chicken livers
+							p.b-shop__text $9.55
+
+					.col-md-4
+						img(src="img/img-shop-2.png", alt="img shop 2").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Steak with vegetables
+							p.b-shop__text $14.20
+
+					.col-md-4
+						img(src="img/img-shop-3.png", alt="img shop 3").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Beef with pineapple
+							p.b-shop__text $18.20
+			.tab-pane#breakfest(role='tabpanel')
+				.row.b-shop__bot
+					.col-md-4
+						img(src="img/img-shop-6.png", alt="img shop 3").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Egg baguette
+							p.b-shop__text $8.10
+					.col-md-4
+					.col-md-4
+			.tab-pane#dessert(role='tabpanel')
+				.row.b-shop__bot
+					.col-md-4
+						img(src="img/shop-img-4.png", alt="img shop 1").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Waffles with coffee
+							p.b-shop__text $7.90
+
+					.col-md-4
+						img(src="img/img-shop-5.png", alt="img shop 2").b-shop__img
+						.b-shop__box
+							h1.b-shop__title Apple pie
+							p.b-shop__text $15.70
+					.col-md-4
+		.b-shop__arrow
+			i.fas.fa-angle-right.fa-2x.b-shop__arrow--right
+			i.fas.fa-angle-left.fa-2x.b-shop__arrow--left
+			.b-shop__number
+				ul
+					li
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+					li
+						a(href="#") 4
+					li
+						a(href="#") 5
+
+
+				
+			
